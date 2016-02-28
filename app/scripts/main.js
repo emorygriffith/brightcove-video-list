@@ -1,7 +1,7 @@
 var account_username = 'emorygriffith91@gmail.com';
 var account_password = 'Ahem210fire765!';
 var account_id = '4744530050001';
-var call_url 'https://players.api.brightcove.com/v1/accounts/' + account_id + '/players';;
+var call_url = 'https://players.api.brightcove.com/v1/accounts/' + account_id + '/players';
 
 var makeAjaxCall = function (callURL, callType, callData) {
   if (callData) {
@@ -30,25 +30,14 @@ var makeAjaxCall = function (callURL, callType, callData) {
   }
 };
 
-
-var getPlayerInfo = function () {
-  call_url = "https://players.api.brightcove.com/v1/accounts/" + account_id + "/players";
-  makeAjaxCall(call_url, "GET", null);
-};
-
 var ajaxSuccess = function (data) {
-  document.getElementById("jsonResponse").innerHTML = JSON.stringify(data);
+	var results = data.items;
+	$.each(results, function(key, value){
+
+		console.log(value);
+		// document.getElementById("jsonResponse").innerHTML = JSON.stringify(data);
+	})
+
 };
 
-//
-// var ajaxSuccess = function (data) {
-//   switch (callPurpose) {
-//     case "getPlayers":
-//       createCheckboxes(data);
-//       watchCheckboxes();
-//       break;
-//     case "deletePlayer":
-//       document.getElementById("jsonResponse").innerHTML += data;
-//       break;
-//   }
-// };
+makeAjaxCall(call_url, "GET", null);
