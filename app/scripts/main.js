@@ -33,20 +33,12 @@ var makeAjaxCall = function (callURL, callType, callData) {
 
 var ajaxSuccess = function (players) {
 
-//  console.log(players);
 	var results = players.items;
-	//console.log(results);
   $.each(results, function(key, val){
-    console.log(val);
-    $('.player-list').append("<div>" + val.name + val.created_at + "</div>")
-  })
-
-
-  // var template = _.template($('#player-list-temp').html());
-  // var html = template(results);
-  // $(".player-list").html(html);
-
-
+    var created_time = moment(val.created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")
+    console.log(created_time);
+    $('.player-list').append("<div>" + "<strong>" + val.name + "</strong>" +  " was created on "  + created_time + "</div>")
+  });
 
 };
 
@@ -55,9 +47,3 @@ var ajaxError = function () {
 }
 
 makeAjaxCall(call_url, "GET", null);
-
-
-$('.edit').click(function(){
-
-  alert('clicked');
-});
