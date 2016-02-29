@@ -16,7 +16,7 @@ var data = [
           "src": "http://players.brightcove.net/4744530050001/default_default/index.html?videoId=4744690338001"
       },
       {
-          "title": "Sample Video 1",
+          "title": "Sample Video 2",
           "description": "This short description can be used to give more info...",
           "id": "2",
           "length": "29",

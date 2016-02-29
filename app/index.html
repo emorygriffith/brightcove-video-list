@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>brightcove</title>
+    <title>Emory's Video List</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -32,9 +32,9 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
+          <li class="active"><a href="#">See the Code</a></li>
         </ul>
-        <h3 class="text-muted">Brightcove</h3>
+        <h3 class="text-muted">Emory's Video List</h3>
       </div>
       <div class="vids">
 
@@ -57,7 +57,7 @@
         <tbody>
           <% _.each(data, function(vid){%>
             <tr class>
-              <td><div style="display: block; position: relative; max-width: 100%;"><div style="padding-top: 56.25%;"><iframe src="<%= vid.src %>"
+              <td class="vidContain"><div style="display: block; position: relative; max-width: 100%;"><div style="padding-top: 56.25%;"><iframe src="<%= vid.src %>"
         allowfullscreen
         webkitallowfullscreen
         mozallowfullscreen
@@ -73,59 +73,6 @@
       </thead>
     </table>
 </script>
-
-
-
-
-<!--
-      <table class='table striped'>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Author</th>
-            <th>Id</th>
-          </tr>
-          <tbody>
-
-              <tr class>
-                <td>VID GOES HERE DOE</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><a href='#/edit/<%= patient.id %>' class='btn btn-success'>Edit</a></td>
-              </tr>
-
-          </tbody>
-        </thead>
-      </table> -->
-
-      <!-- <div style="display: block; position: relative; max-width: 100%;"><div style="padding-top: 56.25%;"><iframe src="//players.brightcove.net/4744530050001/default_default/index.html?videoId=4766574034001"
-      allowfullscreen
-      webkitallowfullscreen
-      mozallowfullscreen
-      style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
-
-      <div class="jsonResponse">
-      </div>
-
-
-      <div style="display: block; position: relative; max-width: 100%;"><div style="padding-top: 56.25%;"><iframe src="//players.brightcove.net/4744530050001/default_default/index.html?videoId=4744690338001"
-allowfullscreen
-webkitallowfullscreen
-mozallowfullscreen
-style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
-
-
-
-
-<div style="display: block; position: relative; max-width: 100%;"><div style="padding-top: 56.25%;"><iframe src="//players.brightcove.net/4744530050001/default_default/index.html?videoId=4744690337001"
-allowfullscreen
-webkitallowfullscreen
-mozallowfullscreen
-style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div> -->
 
       <div class="footer">
         <p>Made with ♥ by Emory Griffith</p>
