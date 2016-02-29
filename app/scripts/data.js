@@ -4,7 +4,6 @@ var data = [
           "description": "Short video I created",
           "id": "1",
           "length": "15",
-          "author ": "Emory",
           "src": "http://players.brightcove.net/4744530050001/default_default/index.html?videoId=4766574034001"
       },
       {
@@ -12,7 +11,6 @@ var data = [
           "description": "This short description can be used to give more info...",
           "id": "2",
           "length": "8",
-          "author ": "Brightcove",
           "src": "http://players.brightcove.net/4744530050001/default_default/index.html?videoId=4744690338001"
       },
       {
@@ -20,7 +18,6 @@ var data = [
           "description": "This short description can be used to give more info...",
           "id": "2",
           "length": "29",
-          "author ": "Brightcove",
           "src": "http://players.brightcove.net/4744530050001/default_default/index.html?videoId=4744690337001"
       }
     ];

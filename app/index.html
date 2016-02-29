@@ -32,47 +32,19 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">See the Code</a></li>
+          <li class="active"><a href="https://github.com/emorygriffith/brightcove-video-list">See the Code</a></li>
         </ul>
         <h3 class="text-muted">Emory's Video List</h3>
       </div>
-      <div class="vids">
 
+          <h3>Player List</h3>
+          <div class="player-list"></div>
+
+
+
+      <div class="vids">
       </div>
 
-
-
-
-
-<script type="text/template" id="video-list">
-  <table class='table striped'>
-      <thead>
-        <tr>
-          <th>Video</th>
-          <th>Title</th>
-          <th>Description</th>
-          <th>Author</th>
-          <th>Id</th>
-        </tr>
-        <tbody>
-          <% _.each(data, function(vid){%>
-            <tr class>
-              <td class="vidContain"><div style="display: block; position: relative; max-width: 100%;"><div style="padding-top: 56.25%;"><iframe src="<%= vid.src %>"
-        allowfullscreen
-        webkitallowfullscreen
-        mozallowfullscreen
-        style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div></td>
-              <td><%= vid.title %></td>
-              <td><%= vid.description %></td>
-              <td><%= vid.author %></td>
-              <td><%= vid.id %></td>
-              <td>Edit</td>
-            </tr>
-          <% }); %>
-        </tbody>
-      </thead>
-    </table>
-</script>
 
       <div class="footer">
         <p>Made with ♥ by Emory Griffith</p>
@@ -80,6 +52,44 @@
 
     </div>
 
+
+
+
+    <script type="text/template" id="video-list">
+      <table class='table striped'>
+          <thead>
+            <tr>
+              <th>Video</th>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Id</th>
+            </tr>
+            <tbody>
+              <% _.each(data, function(vid){%>
+                <tr class>
+                  <td class="vidContain"><div style="display: block; position: relative; max-width: 100%;"><div style="padding-top: 56.25%;"><iframe src="<%= vid.src %>"
+            allowfullscreen
+            webkitallowfullscreen
+            mozallowfullscreen
+            style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div></td>
+
+                  <td class="vid-title"><%= vid.title %></td>
+                  <td class="vid-desc"><%= vid.description %></td>
+                  <td class="vid-id"><%= vid.id %></td>
+                  <td><span class="btn btn-primary edit">Edit</span></td>
+                </tr>
+              <% }); %>
+            </tbody>
+          </thead>
+        </table>
+    </script>
+
+
+    <script type="text/template" id="player-list-temp">
+      <% _.each(results, function(plyr){%>
+          <div>hi</div>
+      <% }); %>
+    </script>
 
 
       <!-- <script type="text/template" id="videos">
